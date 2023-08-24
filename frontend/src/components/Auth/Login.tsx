@@ -35,10 +35,7 @@ const Login = () => {
   const nav = useNavigate();
   const handleRegister = () => {
     // Handle registration logic here
-    console.log("Username:", username);
-    console.log("Password:", password);
     fetchApi("auth/login", "POST", { username, password }, {}).then((res) => {
-      console.log(res, "login");
       if (res.status == 200) {
         localStorage.setItem("accesstoken", res.data.AccessToken);
         nav("/chat");

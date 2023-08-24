@@ -19,7 +19,6 @@ export class ProtectedController {
     this.router.post("/allMessages", this.allMessages);
   }
   async chat(req: any, res: Response) {
-    console.log("hiiii", req.body);
     const { userInput, history } = req.body;
     const num = await Message.countDocuments({
       userId: req.jwtData.username,

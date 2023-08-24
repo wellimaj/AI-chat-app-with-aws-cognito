@@ -118,7 +118,6 @@ const ChatUI: React.FC = () => {
       }
     )
       .then((res) => {
-        console.log(res, "chat");
         setMessages(res.data.allMessages);
         setLoading(false);
         setNewMessage("");
@@ -126,7 +125,6 @@ const ChatUI: React.FC = () => {
       .catch((error) => {
         console.log(error);
         if (error.response.status == 429) {
-          console.log(error.response.data, "chat");
           setLoading(false);
           setMessages((prev) => [...prev, error.response.data]);
         } else {
@@ -159,7 +157,6 @@ const ChatUI: React.FC = () => {
       }
     )
       .then((res) => {
-        console.log(res, "chat");
         setMessages((prev) => [...prev, res.data]);
         setLoading(false);
         setNewMessage("");
@@ -167,7 +164,6 @@ const ChatUI: React.FC = () => {
       .catch((error) => {
         console.log(error);
         if (error.response.status == 429) {
-          console.log(error.response.data, "chat");
           setLoading(false);
           setMessages((prev) => [...prev, error.response.data]);
         } else {
