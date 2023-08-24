@@ -1,10 +1,13 @@
 # AI-chat-app-with-aws-cognito
 Hi , this is the assignment. 
-.env file will be provided to you
+.env file will be provided to you 
+
+
 requirements :
 	backend node  14.17.6
 	mongoDB 
 	once installed 
+ 
 npm run dev in backend and front end 
 
 code structuring is to be done as time was not properly managed and some types are any due to lack to time again 
