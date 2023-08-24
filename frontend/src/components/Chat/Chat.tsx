@@ -119,7 +119,6 @@ const ChatUI: React.FC = () => {
     )
       .then((res) => {
         setMessages(res.data.allMessages);
-        setLoading(false);
         setNewMessage("");
       })
       .catch((error) => {
@@ -204,7 +203,7 @@ const ChatUI: React.FC = () => {
           onClick={handleSubmit}
           variant="contained"
         >
-          {true ? (
+          {loading ? (
             <CircularProgress
               sx={{ height: "24px", width: "24px", position:"absolute" }}
             ></CircularProgress>
