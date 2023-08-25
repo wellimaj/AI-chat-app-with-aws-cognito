@@ -30,9 +30,6 @@
     "jwk-to-pem": "^2.0.5",
     "mongoose": "^7.4.4",
     "node-fetch": "^2.6.0",
-    "nodejs-websocket": "^1.7.2",
-    "socket.io-client": "^4.7.2",
-    "websocket": "^1.0.34",
     "ws": "^8.13.0"
   }
 }

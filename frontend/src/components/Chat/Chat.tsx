@@ -118,7 +118,7 @@ const ChatUI: React.FC = () => {
       }
     )
       .then((res) => {
-        setMessages(res.data.allMessages);
+        if(res.data?.allMessages.length > 0)setMessages(res.data.allMessages);
         setNewMessage("");
       })
       .catch((error) => {

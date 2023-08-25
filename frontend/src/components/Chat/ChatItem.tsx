@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
-import { Typography } from "@mui/material";
+import { Typography, Zoom } from "@mui/material";
 import styled from "@emotion/styled";
 const Chat = styled(Typography)<any>`
   height: auto;
 
   background: #4b8ac9;
   margin: 4px;
-  padding:12px;
-  border-radius:8px;
+  padding: 12px;
+  border-radius: 8px;
   max-width: 80%;
   min-width: 40%;
   text-wrap: wrap;
@@ -20,5 +20,11 @@ export default function ChatItem({ message, origin, last }: any) {
   useEffect(() => {
     if (last) ref.current?.scrollIntoView();
   }, []);
-  return <Chat origin={origin} ref={ref}>{message}</Chat>;
+  return (
+    <Chat origin={origin} ref={ref}>
+      <Zoom in={true}>
+        <div>{message}</div>
+      </Zoom>
+    </Chat>
+  );
 }
